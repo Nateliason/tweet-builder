@@ -43,19 +43,16 @@ function editText(tweetText) {
 }
 
 const fillWords = ['pretty', 'very'];
+const removeWords = document.querySelector('.fillerWordsList');
 
-fillWords.forEach((element) => console.log(element));
+const checkButton = document.querySelector('#checkButton');
 
-// function checkFillerWords(tweetBody) {
+checkButton.addEventListener('click', function () {
+  removeWords.textContent = ``;
 
-//   console.log(fillWords);
-
-//   fillWords.forEach(checkEachFillWord());
-//   function checkEachFillWord(value) {
-//     if (tweet1.value.includes(this) === true) {
-//       console.log(`don't use that word!`);
-//     } else {
-//       null;
-//     }
-//   }
-// }
+  fillWords.forEach((element) => {
+    if (tweet1.value.includes(element) === true) {
+      removeWords.textContent += `${element}`;
+    }
+  });
+});
