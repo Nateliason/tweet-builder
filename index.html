@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./base.css">
+
+    <title>Tweet Builder</title>
+</head>
+
+<body>
+    <h1 id="page-title">Build your tweet!</h1>
+
+
+    <textarea name="tweet1" id="tweetArea1" class="form-control tweetForm" cols="30" rows="10"></textarea>
+
+    <p class="counterTitle">Character Count:</p>
+    <p class="count" id="tweet1Count">0</p>
+
+    <button id='saveButton' class='btn btn-primary'>Save</button>
+
+    <div id='savedTweets'>
+        <h2>Saved Tweets</h2>
+
+    </div>
+
+    <div class="fillerWords">
+        <h2>Try removing these words</h2>
+        <p class="fillerWordsList"></p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="./base.js"></script>
+</body>
+
+</html>
