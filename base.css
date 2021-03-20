@@ -16,7 +16,7 @@ body {
     font-weight: 700;
 }
 
-#saveButton {
+.tweet-button {
     margin-bottom: 20px;
 }
 

@@ -42,7 +42,24 @@ function editText(tweetText) {
   parent.remove();
 }
 
-const fillWords = ['pretty', 'very'];
+const fillWords = [
+  'think',
+  'pretty',
+  'really',
+  'to be',
+  'actually',
+  'around',
+  'a lot',
+  'very',
+  'thing',
+  'much',
+  'just',
+  'that',
+  'unfortunate',
+  'fortunate',
+  'nice',
+];
+
 const removeWords = document.querySelector('.fillerWordsList');
 
 const checkButton = document.querySelector('#checkButton');
@@ -52,7 +69,9 @@ checkButton.addEventListener('click', function () {
 
   fillWords.forEach((element) => {
     if (tweet1.value.includes(element) === true) {
-      removeWords.textContent += `${element}`;
+      const newFiller = document.createElement('li');
+      newFiller.textContent = `${element}`;
+      removeWords.appendChild(newFiller);
     }
   });
 });

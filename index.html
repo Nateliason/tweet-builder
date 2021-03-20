@@ -18,14 +18,14 @@
 <body>
     <h1 id="page-title">Build your tweet!</h1>
 
-
-    <textarea name="tweet1" id="tweetArea1" class="form-control tweetForm" cols="30" rows="10"></textarea>
+    <textarea name="tweet1" id="tweetArea1" class="form-control tweetForm" cols="30" rows="10"
+        maxlength="280"></textarea>
 
     <p class="counterTitle">Character Count:</p>
     <p class="count" id="tweet1Count">0</p>
 
-    <button id='saveButton' class='btn btn-primary'>Save</button>
-    <button id='checkButton' class='btn btn-success'>Check</button>
+    <button id='saveButton' class='btn btn-primary tweet-button'>Save</button>
+    <button id='checkButton' class='btn btn-success tweet-button'>Check</button>
 
     <div id='savedTweets'>
         <h2>Saved Tweets</h2>
@@ -34,7 +34,7 @@
 
     <div class="fillerWords">
         <h2>Try removing these words</h2>
-        <p class="fillerWordsList"></p>
+        <ul class="fillerWordsList"></ul>
     </div>
 
 
