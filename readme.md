@@ -13,10 +13,18 @@
 ## Done
 
 ### Function
+
 * Prevent input over 280 characters
 * Add a button to check for filler words
 * Make the filler words show up below
+* Save tweets as you're working on them
+* Edit tweets after you've saved them
+
+### Code Improvements
+
+* Change to using innerHTML
 
 ### Styling
+
 * Make the words to remove show up as a bulleted list
 * Add Bootstrap

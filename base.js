@@ -1,43 +1,39 @@
 const tweet1Count = document.querySelector('#tweet1Count');
 const tweet1 = document.querySelector('#tweetArea1');
 
+// Update the character counter
 tweet1.addEventListener('input', function () {
   tweet1Count.textContent = tweet1.textLength;
 });
+
+// Function for clearing the tweet info
+function resetTweet() {
+  tweet1.value = '';
+  tweet1Count.textContent = '0';
+}
 
 const saveButton = document.querySelector('#saveButton');
 
 saveButton.addEventListener('click', function () {
   // Make the div for the saved tweet
-  const block = document.createElement('div');
-  block.className = 'savedTweet';
+  const saved = document.getElementById('savedTweets');
 
-  // Create a paragraph element in the div and add the tweet text
-  const para = document.createElement('p');
-  para.className = 'savedTweetText';
-  para.insertAdjacentText('beforeend', tweet1.value);
-
-  // Put the paragraph text in the div
-  block.appendChild(para);
-
-  // Make the Edit & Copy buttons
-  block.insertAdjacentHTML(
+  // Add the text and make the Edit & Copy buttons
+  saved.insertAdjacentHTML(
     'beforeend',
-    ` <a href='#' onclick=editText(this)>Edit</a> <a href='#'>Copy</a>`
+    `<div class="savedTweet">
+      <p>${tweet1.value} <a href='#' onclick=editText(this)>Edit</a> <a href='#'>Copy</a> </p>
+    </div>`
   );
 
-  // Put the new div inside the savedTweets div
-  const saved = document.getElementById('savedTweets');
-  saved.appendChild(block);
-
   // Reset the drafting box
-  tweet1.value = '';
-  tweet1Count.textContent = '0';
+  resetTweet();
 });
 
+// Add the edit function to put the tweet back in the text area and update the character count
 function editText(tweetText) {
   const parent = tweetText.parentElement;
-  tweet1.value = parent.querySelector('p').textContent;
+  tweet1.value = parent.textContent.slice(0, -11);
   tweet1Count.textContent = tweet1.textLength;
   parent.remove();
 }
@@ -61,7 +57,6 @@ const fillWords = [
 ];
 
 const removeWords = document.querySelector('.fillerWordsList');
-
 const checkButton = document.querySelector('#checkButton');
 
 checkButton.addEventListener('click', function () {
@@ -69,9 +64,7 @@ checkButton.addEventListener('click', function () {
 
   fillWords.forEach((element) => {
     if (tweet1.value.includes(element) === true) {
-      const newFiller = document.createElement('li');
-      newFiller.textContent = `${element}`;
-      removeWords.appendChild(newFiller);
+      removeWords.insertAdjacentHTML('beforeend', `<li>${element}</li>`);
     }
   });
 });
