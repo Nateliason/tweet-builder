@@ -1,10 +1,13 @@
 const tweet1Count = document.querySelector('#tweet1Count');
 const tweet1 = document.querySelector('#tweetArea1');
 
-// Update the character counter
-tweet1.addEventListener('input', function () {
+// Make a function for updating character count
+
+function updateChar() {
   tweet1Count.textContent = tweet1.textLength;
-});
+}
+
+tweet1.addEventListener('input', updateChar);
 
 // Function for clearing the tweet info
 function resetTweet() {
@@ -34,7 +37,7 @@ saveButton.addEventListener('click', function () {
 function editText(tweetText) {
   const parent = tweetText.parentElement;
   tweet1.value = parent.textContent.slice(0, -11);
-  tweet1Count.textContent = tweet1.textLength;
+  updateChar();
   parent.remove();
 }
 
