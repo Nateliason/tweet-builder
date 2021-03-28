@@ -1,14 +1,16 @@
 ## To Do
 
 * Get the copy function working
-* Add a button to open twitter in a new tab
-* Directly tweet from the app? 
 * Recommended replacement words if you're being too verbose
-* Have saved tweets persist or store locally 
 * See a live preview of your tweet off to the right as you type it
-* Highlight filler words in your tweet to the right as it gets filled
-* Make it a database for words to check for, add them from the UX 
+* Highlight filler words in your tweet to the right as it gets filled 
 * Make line breaks persist when saving the tweet. 
+
+## If I add user accounts
+
+* Directly tweet from the app
+* Have saved tweets persist or store locally 
+* Make it a database for words to check for, add them from the UX
 
 ## Done
 

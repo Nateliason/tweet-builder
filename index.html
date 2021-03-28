@@ -16,25 +16,31 @@
 </head>
 
 <body>
-    <h1 id="page-title">Build your tweet!</h1>
+    <div class="inner">
+        <h1 id="page-title">Build your tweet!</h1>
+        <a href="https://twitter.com/" target="_blank">
+            <button id='tweetButton' class='btn tweet-button'>Tweet!</button>
+        </a>
 
-    <textarea name="tweet1" id="tweetArea1" class="form-control tweetForm" cols="30" rows="10"
-        maxlength="280"></textarea>
+        <textarea name=" tweet1" id="tweetArea1" class="form-control tweetForm" cols="30" rows="10"
+            maxlength="280"></textarea>
 
-    <p class="counterTitle">Character Count:</p>
-    <p class="count" id="tweet1Count">0</p>
+        <p class="counterTitle">Character Count:</p>
+        <p class="count" id="tweet1Count">0</p>
 
-    <button id='saveButton' class='btn btn-primary tweet-button'>Save</button>
-    <button id='checkButton' class='btn btn-success tweet-button'>Check</button>
+        <button id='saveButton' class='btn btn-primary tweet-button'>Save</button>
+        <button id='checkButton' class='btn btn-success tweet-button'>Check</button>
 
-    <div id='savedTweets'>
-        <h2>Saved Tweets</h2>
+        <div id='savedTweets'>
+            <h2>Saved Tweets</h2>
 
-    </div>
+        </div>
 
-    <div class="fillerWords">
-        <h2>Try removing these words</h2>
-        <ul class="fillerWordsList"></ul>
+        <div class="fillerWords">
+            <h2>Try removing these words</h2>
+            <ul class="fillerWordsList"></ul>
+        </div>
+
     </div>
 
 
